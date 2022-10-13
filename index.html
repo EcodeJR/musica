@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <!--         *Nav section*             -->
+
+    <nav id="nav">
+        <i class="bx bx-x" id="close_nav"></i>
+        <div class="nav_item1">
+            <a href="#"><i class="bx bxs-home active"></i><p class="active1">Home</p></a>
+            <a href="#"><i class="bx bxs-category-alt"></i><p>My collections</p></a>
+            <a href="#"><i class="bx bxs-radio"></i><p>Radio</p></a>
+            <a href="#"><i class="bx bxs-box"></i><p>Music videos</p></a>
+        </div>
+        <div class="nav_item2">
+            <a href="#"><i class="bx bxs-user"></i><p>Profile</p></a>
+            <a href="#"><i class="bx bxs-exit"></i><p>Log out</p></a>
+        </div>
+    </nav>
+
+    <!--         *Nav section End*-->
+
+
+    <!--Play music-->
+
+
+    <div class="music_player">
+        <div class="music_img">
+            <img src="/Data/Rectangle 21.png" alt="music">
+            <div class="m_title">
+                <p id="title">Seasons in</p>
+                <p id="artist">James</p>
+            </div>
+        </div>
+        <div class="music_controls">
+            <div class="control">
+                <i class="bx bx-shuffle"></i>
+                <i class="bx bx-skip-previous" onclick="previous_song()" id="pre"></i>
+                <i class="bx bx-play" onclick="justplay()" id="play"></i>
+                <i class="bx bx-skip-next" onclick="next_song()" id="next"></i>
+                <i class="bx bx-repeat" id="auto" onclick="autoplay_switch()"></i>
+            </div>
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+        </div>
+        <div class="music_volume">
+            <i class="bx bx-volume-full"></i>
+            <input title="volume" type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+        </div>
+    </div>
+
+
+    <!--Play music end-->
+
+
+
+    <!--    Home Page          -->
+
+    <section class="home">
+
+
+        <!--Logo and search-->
+        <div class="logo_search">
+
+            <div class="logo">
+                <i class="bx bx-menu" id="open_nav"></i>
+                <img src="/Data/Logo.png" alt="Musica logo">
+            </div>
+            <div class="search">
+                <i class="bx bx-search"></i>
+                <input type="text" name="search" placeholder="Search artists">
+            </div>
+        </div>
+        <!--Logo and search End-->
+
+
+
+        <!--Home content-->
+        <div class="home_content">
+
+            <!--Hero content-->
+
+            <div class="hero_top">
+                <div class="hero">
+                    <img src="/Data/Vector.svg" alt="lines" class="lines">
+                    <div class="hero_text">
+                        <p>Currated playlist</p>
+                        <div class="text">
+
+                            <h1>R & B Hits</h1>
+                            <h2>All mine, Lie again, Petty call me everyday, Out of time, No love, Bad habit, and so much more</h2>
+                        </div>
+                        <div class="likes">
+                            <div class="likes_img">
+                                <img src="/Data/Ellipse 2.png" alt="Ellipse">
+                                <img class="like2" src="/Data/Ellipse 3.png" alt="Ellipse">
+                                <img class="like3" src="/Data/Ellipse 4.png" alt="Ellipse">
+                                <img class="like4" src="/Data/Ellipse 5.png" alt="Ellipse">
+                                <img class="like5" src="/Data/Ellipse 6.png" alt="Ellipse">
+                            </div>
+                            <i class="bx bxs-heart heart1"></i>
+                            <h3>33k likes</h3>
+                        </div>
+                    </div>
+                    <div class="hero_img">
+                        <img src="/Data/Eric Esma.png" alt="Eric">
+                    </div>
+                </div>
+                <div class="top">
+                    <h1 class="top_text">Top charts</h1>
+                    <div class="chart">
+                        <div class="one">
+                            <img src="/Data/Rectangle c1.png" alt="img">
+                            <div class="chart_text">
+                                <h1>Golden age of 80s</h1>
+                                <h2>Sean swadder</h2>
+                                <h3>2:34:45</h3>
+                            </div>
+                        </div>
+                        <i class="bx bx-heart heart2"></i>
+                    </div>
+                    <div class="chart">
+                        <div class="one">
+                            <img src="/Data/Rectangle c2.png" alt="img">
+                            <div class="chart_text">
+                                <h1>Reggae “n” blues</h1>
+                                <h2>Dj YK mule</h2>
+                                <h3>1:02:42</h3>
+                            </div>
+                        </div>
+                        <i class="bx bx-heart heart2"></i>
+                    </div>
+                    <div class="chart">
+                        <div class="one">
+                            <img src="/Data/Rectangle c3.png" alt="img">
+                            <div class="chart_text">
+                                <h1>Tomorrow’s tunes</h1>
+                                <h2>Obi Datti</h2>
+                                <h3>2:01:25</h3>
+                            </div>
+                        </div>
+                        <i class="bx bx-heart heart2"></i>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--Hero content End-->
+
+
+            <!--Songs slider-->
+
+            <div class="slider">
+                <a href="#last" class="right"><i class="bx bx-chevron-right"></i></a>
+                <a href="#first" class="left"><i class="bx bx-chevron-left"></i></a>
+                <h1>New releases.</h1>
+                <div class="slides">
+                    <div class="slide slide1" id="first">
+                        <img src="/Data/Rectangle 14.png">
+                    </div>
+                    <div class="slide slide2">
+                        <img src="/Data/Rectangle 15.png">
+                    </div>
+                    <div class="slide slide3">
+                        <img src="/Data/Rectangle 16.png">
+                    </div>
+                    <div class="slide slide4">
+                        <img src="/Data/Rectangle 17.png">
+                    </div>
+                    <div class="slide slide5">
+                        <img src="/Data/Rectangle 18.png">
+                    </div>
+                    <div class="slide slide6">
+                        <img src="/Data/Rectangle 19.png">
+                    </div>
+                    <div class="slide slide7">
+                        <img src="/Data/Rectangle 20.png">
+                    </div>
+                    <div class="slide slide8" id="last">
+                        <img src="/Data/Rectangle 21.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider">
+                <a href="#last2" class="right"><i class="bx bx-chevron-right"></i></a>
+                <a href="#first2" class="left"><i class="bx bx-chevron-left"></i></a>
+                <h1>Top Hits.</h1>
+                <div class="slides">
+                    <div class="slide slide5" id="first2">
+                        <img src="/Data/Rectangle 18.png">
+                    </div>
+                    <div class="slide slide2">
+                        <img src="/Data/Rectangle 15.png">
+                    </div>
+                    <div class="slide slide1">
+                        <img src="/Data/Rectangle 14.png">
+                    </div>
+                    <div class="slide slide4">
+                        <img src="/Data/Rectangle 17.png">
+                    </div>
+                    <div class="slide slide8">
+                        <img src="/Data/Rectangle 21.png">
+                    </div>
+                    <div class="slide slide3">
+                        <img src="/Data/Rectangle 16.png">
+                    </div>
+                    <div class="slide slide7">
+                        <img src="/Data/Rectangle 20.png">
+                    </div>
+                    <div class="slide slide6" id="last2">
+                        <img src="/Data/Rectangle 19.png">
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Songs slider End-->
+        </div>
+
+        <!--Home content End-->
+
+    </section>
+
+    <!--         *Home End*          -->
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
