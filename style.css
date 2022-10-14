@@ -323,7 +323,7 @@ input[type="range"]::-webkit-slider-thumb {
         justify-content: center;
     }
     .logo_search .search {
-        width: 60%;
+        width: 20%;
         height: 100%;
         display: flex;
         align-items: center;
@@ -344,6 +344,7 @@ input[type="range"]::-webkit-slider-thumb {
         border: none;
         background: transparent;
         font-size: 17px;
+        display: none;
     }
 }
 
@@ -375,6 +376,19 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
     right: 0;
     top: 0;
+    animation: 1s scale infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 .hero_text {
