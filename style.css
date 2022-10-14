@@ -750,19 +750,20 @@ input[type="range"]::-webkit-slider-thumb {
 
 .tmrw_img {
     height: 300px;
-    border-radius: 35px;
+    border-radius: 25px;
     overflow: hidden;
 }
 
 .tmrw_img img {
     height: 100%;
     width: 100%;
-    border-radius: 35px;
+    object-fit: fill;
+    border-radius: 25px;
     transition: all .6s ease-in-out;
 }
 
 .tmrw_img img:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .tmrw_text {
