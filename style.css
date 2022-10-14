@@ -885,9 +885,8 @@ input[type="range"]::-webkit-slider-thumb {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 10% 5%;
+        margin: 20% 5%;
         z-index: 100;
-        padding: 10% 0 0 0;
     }
     .tmrw_head {
         width: 100%;
