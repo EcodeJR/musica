@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="style.css">
     <!--Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <!--Scroll revel js-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
     <!--         *Nav section*             -->
 
-    <nav id="nav">
+    <nav id="nav" class="nav">
         <i class="bx bx-x" id="close_nav"></i>
         <div class="nav_item1">
             <a href="#"><i class="bx bxs-home active" id="btn_home"></i><p class="active1" id="h">Home</p></a>
@@ -115,7 +116,7 @@
                         </div>
                     </div>
                     <div class="hero_img">
-                        <img src="/Data/Eric Esma.png" alt="Eric">
+                        <img src="/Data/Eric Esma.png" alt="Eric" class="eric">
                     </div>
                 </div>
                 <div class="top">
@@ -769,6 +770,33 @@
 
 
     <script src="main.js"></script>
+    <script>
+        ScrollReveal({
+            reset: false,
+            distance: '60px',
+            duration: 2500,
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.nav, .hero', {
+            delay: 200,
+            origin: 'left'
+        });
+        ScrollReveal().reveal('.eric', {
+            delay: 300,
+            origin: 'bottom'
+        });
+        ScrollReveal().reveal('.top div', {
+            delay: 200,
+            origin: 'right',
+            interval: 50
+        });
+        ScrollReveal().reveal('.slides div', {
+            delay: 200,
+            origin: 'right',
+            interval: 50
+        });
+    </script>
 </body>
 
 </html>
