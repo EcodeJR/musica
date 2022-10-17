@@ -4,6 +4,10 @@ let open_nav2 = document.getElementById('open_nav2');
 let open_nav3 = document.getElementById('open_nav3');
 let open_nav4 = document.getElementById('open_nav4');
 let open_nav5 = document.getElementById('open_nav5');
+let open_nav6 = document.getElementById('open_nav6');
+let open_nav7 = document.getElementById('open_nav7');
+let open_nav8 = document.getElementById('open_nav8');
+let open_nav9 = document.getElementById('open_nav9');
 let close_nav = document.getElementById('close_nav');
 let nav0 = document.getElementById('nav');
 
@@ -24,6 +28,22 @@ open_nav4.addEventListener('click', function() {
     nav0.style.left = '0';
 });
 open_nav5.addEventListener('click', function() {
+    nav0.style.transition = '.4s';
+    nav0.style.left = '0';
+});
+open_nav6.addEventListener('click', function() {
+    nav0.style.transition = '.4s';
+    nav0.style.left = '0';
+});
+open_nav7.addEventListener('click', function() {
+    nav0.style.transition = '.4s';
+    nav0.style.left = '0';
+});
+open_nav8.addEventListener('click', function() {
+    nav0.style.transition = '.4s';
+    nav0.style.left = '0';
+});
+open_nav9.addEventListener('click', function() {
     nav0.style.transition = '.4s';
     nav0.style.left = '0';
 });
@@ -65,10 +85,10 @@ let All_song = [{
         singer: "Ed_Sheeran"
     },
     {
-        name: "Andrea",
-        path: "music/Bad_Bunny_ft_buscabulla_-_Andrea.mp3",
+        name: "Unstoppable",
+        path: "music/Sia, R3HAB - Unstoppable.mp3",
         img: "Data/Rectangle 19.png",
-        singer: "Bad Bunny"
+        singer: "Sia, R3HAB"
     },
     {
         name: "We Found Love",
@@ -77,10 +97,10 @@ let All_song = [{
         singer: "Rihanna"
     },
     {
-        name: "Andrea",
-        path: "music/Bad_Bunny_ft_buscabulla_-_Andrea.mp3",
+        name: "Fall in Love",
+        path: "music/HAVOQ & Max Adrian feat. Katie Sky - Fall In Love.mp3",
         img: "Data/Rectangle 17.png",
-        singer: "Bad Bunny"
+        singer: "Katie Sky"
     }
 ];
 
@@ -210,8 +230,16 @@ function range_slider() {
 //page sections
 let home = document.getElementById('home');
 let radio = document.getElementById('radio');
+let radio2 = document.getElementById('radio2');
+let musicDiv = document.getElementById('music');
+let user = document.getElementById('user');
+let exit = document.getElementById('exit');
 let btn_home = document.getElementById('btn_home');
 let btn_radio = document.getElementById('btn_radio');
+let btn_radio2 = document.getElementById('btn_radio2');
+let btn_music = document.getElementById('btn_music');
+let btn_user = document.getElementById('btn_user');
+let btn_exit = document.getElementById('btn_exit');
 let btn_tomrw = document.getElementById('tomrw');
 let tomrw = document.getElementById('tomrw1');
 let btn_blues = document.getElementById('blues');
@@ -220,6 +248,11 @@ let btn_golden = document.getElementById('golden');
 let golden = document.getElementById('golden1');
 let h = document.getElementById('h');
 let r = document.getElementById('r');
+let r2 = document.getElementById('r2');
+let m = document.getElementById('m');
+let p = document.getElementById('p');
+let e = document.getElementById('e');
+
 
 
 
@@ -228,11 +261,27 @@ btn_radio.addEventListener('click', function() {
     tomrw.style.display = 'none';
     golden.style.display = 'none';
     blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
     radio.style.display = 'block';
     btn_home.classList.remove('active');
     btn_radio.classList.add('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
     h.classList.remove('active1');
     r.classList.add('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
 })
 btn_home.addEventListener('click', function() {
     home.style.display = 'block';
@@ -240,33 +289,212 @@ btn_home.addEventListener('click', function() {
     tomrw.style.display = 'none';
     golden.style.display = 'none';
     blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
     btn_home.classList.add('active');
     btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
     r.classList.remove('active1');
     h.classList.add('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
+})
+btn_radio2.addEventListener('click', function() {
+    home.style.display = 'none';
+    tomrw.style.display = 'none';
+    golden.style.display = 'none';
+    blues.style.display = 'none';
+    radio2.style.display = 'block';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
+    radio.style.display = 'none';
+    btn_home.classList.remove('active');
+    btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.add('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.add('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
+})
+btn_music.addEventListener('click', function() {
+    home.style.display = 'none';
+    tomrw.style.display = 'none';
+    golden.style.display = 'none';
+    blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'block';
+    user.style.display = 'none';
+    exit.style.display = 'none';
+    radio.style.display = 'none';
+    btn_home.classList.remove('active');
+    btn_radio.classList.remove('active');
+    btn_music.classList.add('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.add('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
+})
+btn_user.addEventListener('click', function() {
+    home.style.display = 'none';
+    tomrw.style.display = 'none';
+    golden.style.display = 'none';
+    blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'block';
+    exit.style.display = 'none';
+    radio.style.display = 'none';
+    btn_home.classList.remove('active');
+    btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.add('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.add('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
+})
+btn_exit.addEventListener('click', function() {
+    home.style.display = 'none';
+    tomrw.style.display = 'none';
+    golden.style.display = 'none';
+    blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'block';
+    radio.style.display = 'none';
+    btn_home.classList.remove('active');
+    btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.add('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.add('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
 })
 btn_tomrw.addEventListener('click', function() {
     home.style.display = 'none';
     radio.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
     tomrw.style.display = 'block';
     btn_home.classList.remove('active');
     btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
 })
 btn_blues.addEventListener('click', function() {
     home.style.display = 'none';
     radio.style.display = 'none';
     tomrw.style.display = 'none';
     golden.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
     blues.style.display = 'block';
     btn_home.classList.remove('active');
     btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
 })
 btn_golden.addEventListener('click', function() {
     home.style.display = 'none';
     radio.style.display = 'none';
     tomrw.style.display = 'none';
     blues.style.display = 'none';
+    radio2.style.display = 'none';
+    musicDiv.style.display = 'none';
+    user.style.display = 'none';
+    exit.style.display = 'none';
     golden.style.display = 'block';
     btn_home.classList.remove('active');
     btn_radio.classList.remove('active');
+    btn_music.classList.remove('active');
+    btn_radio2.classList.remove('active');
+    btn_user.classList.remove('active');
+    btn_exit.classList.remove('active');
+    h.classList.remove('active1');
+    r.classList.remove('active1');
+    r2.classList.remove('active1');
+    m.classList.remove('active1');
+    p.classList.remove('active1');
+    e.classList.remove('active1');
+    if (window.innerWidth <= 768) {
+        nav0.style.transition = '.4s';
+        nav0.style.left = '-100%';
+    }
+
 })

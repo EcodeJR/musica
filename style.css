@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #fff;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -28,6 +30,7 @@ nav {
 #open_nav {
     color: #fff;
     display: none;
+    z-index: 100;
 }
 
 #close_nav {
@@ -44,7 +47,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    height: 200px;
     width: 70%;
     background-color: #1A1E1F;
     border-radius: 35px;
@@ -56,7 +59,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 100px;
     width: 70%;
     background-color: #1A1E1F;
     border-radius: 35px;
@@ -270,7 +273,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
     display: flex;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
+    position: fixed;
 }
 
 .logo_search .logo {
@@ -353,7 +357,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin: 0 10px 0 7%;
+    margin: 0 7% 0 7%;
+    padding: 7% 0 0 0;
 }
 
 .hero_top {
@@ -553,6 +558,7 @@ input[type="range"]::-webkit-slider-thumb {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        padding: 15% 0 0 0;
     }
     .likes_img {
         width: 15vw;
@@ -716,7 +722,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .tomrw {
     width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     background: url('/Data/Lead-image.png');
     background-position: center;
     background-size: cover;
@@ -732,11 +738,13 @@ input[type="range"]::-webkit-slider-thumb {
     left: 0;
     background-color: transparent;
     background-image: linear-gradient(19deg, #1D2123 0%, transparent 100%);
-    z-index: 10;
+    z-index: -1.0;
 }
 
-#logo {
-    position: absolute;
+#logo,
+#logo1,
+#logo2 {
+    position: relative;
     top: 0;
     left: 0;
     z-index: 100;
@@ -745,13 +753,10 @@ input[type="range"]::-webkit-slider-thumb {
 .tmrw_content {
     height: auto;
     width: 90%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin: 7% 7% 0 7%;
-    padding: 0 0 0 0;
+    margin: 0 0 0 7%;
     z-index: 100;
 }
 
@@ -764,6 +769,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .tmrw_img {
     height: 300px;
+    width: 300px;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -923,7 +929,10 @@ input[type="range"]::-webkit-slider-thumb {
 .blues {
     width: 100%;
     min-height: 100vh;
-    background: #1D2123;
+    background: url('/Data/Rectangle 19.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: none;
 }
 
@@ -933,7 +942,10 @@ input[type="range"]::-webkit-slider-thumb {
 .golden {
     width: 100%;
     min-height: 100vh;
-    background: #1D2123;
+    background: url('/Data/Rectangle 15.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: none;
 }
 
@@ -947,19 +959,178 @@ input[type="range"]::-webkit-slider-thumb {
     display: none;
 }
 
-#open_nav2 {
-    color: #fff;
+.radio_content {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 7% 0 7%;
+    padding: 7% 0 0 0;
 }
 
-#open_nav3 {
-    color: #fff;
+.radio_btn {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
 }
 
-#open_nav4 {
-    color: #fff;
+.collection {
+    background: #FACD66;
+    border-radius: 27px;
+    font-size: 14px;
+    color: #1D2123;
+    padding: 5px 10px;
+    margin: 0 10px;
 }
 
-#open_nav5 {
+.like_radio {
+    border: 1px solid rgba(239, 238, 224, 0.25);
+    padding: 5px 10px;
+    border-radius: 27px;
+    color: #EFEEE0;
+    font-size: 14px;
+}
+
+.radio_grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(205px, auto));
+}
+
+.radio_card {
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    height: 234px;
+    width: auto;
+    position: relative;
+}
+
+.radio_card_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radio_card_footer h1 {
+    color: #EFEEE0;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio_card_footer h1 span {
+    font-size: 10px;
+}
+
+#radio_btn_play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    font-size: 8px;
+    border-radius: 50%;
+    color: #FACD66;
+    background: #face6679;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.radio_card:hover .radio_card_footer #radio_btn_play {
+    visibility: visible;
+    padding: 5px;
+    font-size: 17px;
+}
+
+@media only screen and (max-width:768px) {
+    #radio_btn_play {
+        visibility: visible;
+        padding: 5px;
+        font-size: 17px;
+    }
+    .radio_content {
+        padding: 10% 0 0 0;
+    }
+}
+
+.radio2 {
+    width: 100%;
+    min-height: 100vh;
+    background: #1D2123;
+    display: none;
+}
+
+.construction {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.constrc_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.constrc_text i {
+    font-size: 50px;
+    color: red;
+    animation: 3s rotation infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.constrc_text h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.music {
+    width: 100%;
+    min-height: 100vh;
+    background: #1D2123;
+    display: none;
+}
+
+.user {
+    width: 100%;
+    min-height: 100vh;
+    background: #1D2123;
+    display: none;
+}
+
+.exit {
+    width: 100%;
+    min-height: 100vh;
+    background: #1D2123;
+    display: none;
+}
+
+#open_nav2,
+#open_nav3,
+#open_nav4,
+#open_nav5,
+#open_nav6,
+#open_nav7,
+#open_nav8,
+#open_nav9 {
     color: #fff;
 }
 
